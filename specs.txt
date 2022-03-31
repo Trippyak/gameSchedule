@@ -1,0 +1,6 @@
+Game Schedule Specs
+
+- Allow users to schedule existing or new games for a day
+- Users are allowed to select a platform for games
+- Schedules can be given a time
+- The user can view the schedule games for the month by defult

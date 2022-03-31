@@ -1,0 +1,5 @@
+FROM denoland/deno:latest as deno
+WORKDIR /gameSchedule
+COPY ./app ./app
+RUN deno cache app/app.ts
+CMD ["run", "--allow-net", "--allow-env", "--allow-read", "app/app.ts"]

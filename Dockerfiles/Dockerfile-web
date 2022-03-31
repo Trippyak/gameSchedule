@@ -1,0 +1,7 @@
+FROM denoland/deno:latest as deno
+WORKDIR /gameSchedule
+COPY ./ui/public public/gameschedule
+COPY ./ui/share public/share
+COPY ./web ./web
+RUN deno cache web/app.ts   
+CMD ["run", "--allow-net", "--allow-env", "--allow-read", "web/app.ts"]
